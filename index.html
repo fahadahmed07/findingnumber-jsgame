@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finding Number JS Game</title>
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="./bootstrap-4.1.3/css/bootstrap.min.css">
+    <!-- Custom Style     -->
+    <link rel="stylesheet" href="./css/custom-style.css">
+
+</head>
+<body class="bg-dark">
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="text-center text-dark col-lg-12 col-md-12 col-sm-12">
+                <h1 class="h1 text-primary text-uppercase my-3">Finding Number</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center">
+                <div class="btn-group" role="group" aria-label="Game Difficulty">
+                    <button type="button" onclick="difficultyEasy(this)" class="btn btn-success text-white text-uppercase font-weight-bold mx-1">Easy</button>
+                    <button type="button" onclick="difficultyMedium(this)" class="btn btn-warning text-white text-uppercase font-weight-bold mx-1">Medium</button>
+                    <button type="button" onclick="difficultyHard(this)" class="btn btn-danger text-white text-uppercase font-weight-bold mx-1">Hard</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7 col-lg-2 col-md-2 text-white text-uppercase text-center border border-white mx-auto my-4 pb-2 px-0 ">
+                <div class="col-lg-12 col-md-12 col-sm-12 bg-primary border-bottom border-white font-weight-bold mb-2 py-2">
+                    <span>Score</span>
+                </div>
+                <span id="yourScore" class="h4 font-weight-light">00</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="mainBox" class="h5 text-white text-center mx-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- SweetAlert2 -->
+    <script src="./js/sweetalert2.js"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="./bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="./js/main-app.js"></script>
+
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAzHaIt1pW823LcXmE1kgzNjhv9r6bK7Fg",
+        authDomain: "findingnumberjs.firebaseapp.com",
+        databaseURL: "https://findingnumberjs.firebaseio.com",
+        projectId: "findingnumberjs",
+        storageBucket: "findingnumberjs.appspot.com",
+        messagingSenderId: "698836577418"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+
+
+</body>
+</html>
